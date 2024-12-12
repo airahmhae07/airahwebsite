@@ -1,0 +1,229 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#515151; /* Light pink */
+            color: #333; /* Dark text for contrast */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Container Styles */
+        .container {
+            flex-grow: 1;
+            background-color: #fff; /* White background for content */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color:#7A7474; Bright pink */
+            color: black;
+            text-align: center;
+            padding: 5px;
+            font-size: 1.5em;
+			
+        }
+
+        .header img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 10px;
+			
+			
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: lighter;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            margin-top: 10px;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ff4f8b;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color:#633738;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Navigation Bar Styles */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color:#CB82D7;pink */
+        }
+
+        .nav a {
+            color:#0E0202; /* Darker pink */
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color:#EF5DFB; /* Highlight color */
+            color: white;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff; /* White background */
+            border: 1px solid #ff4f8b; /* Pink border */
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #ff4f8b; /* Pink text */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff9ecf; /* Highlight on hover */
+            color: white;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color:#B75ACB; /* Bright pink */
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 30px;
+            margin-top: auto;
+        }
+
+        /* Carousel Styles */
+        #outerbox {
+            width: 310px;
+            overflow: hidden;
+            margin: 30px auto;
+        }
+
+        #sliderbox {
+            display: flex;
+            animation: slider 15s infinite;
+        }
+
+        #sliderbox img {
+            width: 300px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        @keyframes slider {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-3100px); }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .header h1 {
+                font-size: 1.2em;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                padding: 10px;
+            }
+
+            #outerbox {
+                width: 100%;
+            }
+
+            #sliderbox img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../../../../../xampp/htdocs/laboratory/6a159f6e-2f32-47da-9efd-c8e1fc658915.jpg" alt="Ultimate Logo">
+            <h1>FASHION SANDALS</h1>
+            <div class="user-section">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <button onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="HOME.html">Home</a>
+            <a href="PRODUCT 3D.html">Product</a>
+            <div class="dropdown">
+                <a href="DESCRIPTION.html" class="dropbtn">Category</a>
+                <div class="dropdown-content">
+                    <a href="CATE.CAS.1.html">Casual Sandals</a>
+                    <a href="CATE.FF.html">Flip Flops</a>
+                    <a href="CATE.KOREAN.html">Korean Sandals</a>
+                </div>
+            </div>
+            <a href="ABOUT.html">About</a>
+            <a href="LOG IN.html">Log in</a>
+        </div>
+        <main>
+            <div class="carousel">
+                <div id="outerbox">
+                    <div id="sliderbox">
+                        <img src="../../../../../xampp/htdocs/laboratory/CASUAL 6.jpg" alt="Product 1">
+                        <img src="../../../../../xampp/htdocs/laboratory/FLIP FLOPS 8.jpg"="Product 2">
+                        <img src="../../../../../xampp/htdocs/laboratory/img.8.jpg" alt="Product 3">
+                        <img src="../../../../../xampp/htdocs/laboratory/SPORT 1.jpg" alt="Product 4">
+                        <img src="../../../../../xampp/htdocs/laboratory/WEDGE 5.jpg"="Product 5">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Fashion Sandals. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

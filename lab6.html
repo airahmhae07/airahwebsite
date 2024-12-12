@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0px 50px 0px 50px;
+            padding: 0;
+            background-color: lightyellow;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: linen;
+            color: #070707;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        img {
+            width: 700px;
+            height: 700px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: lightcoral;
+        }
+
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav a:hover {
+            background-color: #555;
+        }
+
+        .main {
+            padding: 20px;
+            text-align: center;
+            flex: 1; /* Ensures content takes available space */
+        }
+
+        .footer {
+            background-color: lightpink;
+            text-align: center;
+            padding: 10px 5px;
+            position: fixed; /* Keeps the footer fixed at the bottom */
+            width: calc(100% - 100px); /* Adjust for body margin */
+            bottom: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 20px;
+            left: 50px; /* Align with body margins */
+        }
+
+        .content {
+            width: 100%;
+            height: 30px;
+        }
+
+        #outerbox {
+            width: 450px;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            margin: 50px auto;
+        }
+
+        #sliderbox {
+            position: relative;
+            display: flex;
+            width: 4500px;
+            height: 450px;
+            animation: slider 20s infinite;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slider {
+            0%, 10% { left: 0; }
+            12.5%, 22.5% { left: -450px; }
+            25%, 35% { left: -900px; }
+            37.5%, 47.5% { left: -1350px; }
+            50%, 60% { left: -1800px; }
+            62.5%, 72.5% { left: -2250px; }
+            75%, 85% { left: -2700px; }
+            87.5%, 97.5% { left: -3150px; }
+            100% { left: -3600px; }
+        }
+
+        #sliderbox img {
+            width: 450px;
+            height: 450px;
+            align-items: center;
+            justify-content: center;
+        }
+		
+		
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FASHION SANDALS</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="Side Menu.html">Product</a>
+        <a href="About us.html">About us</a>
+        <a href="AIRA LOG IN.html">Log in</a>
+        <a href="AIRA REGISTER.html">Register</a>
+    </div>
+
+    <div class="main">
+        <div id="outerbox">
+            <div id="sliderbox">
+                <img src="../../../../../xampp/htdocs/laboratory/img.1.jpg" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.2.webp" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.4.avif" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.5.jpg" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.6.jpg" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.7.jpg" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.8.jpg" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.9.jpg" alt="product image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.10.jpg" alt="Product Image">
+                <img src="../../../../../xampp/htdocs/laboratory/img.11.jpg" alt="Product Image">
+            </div>
+        </div>
+        
+        <div class="content"></div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; All rights reserved.</p>
+    </div>
+</body>
+</html>

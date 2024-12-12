@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <style>
+    /* General Styles */
+    body {
+      font-style: italic;
+      background-color: aliceblue;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Main Container */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      background:#D680F3;
+      box-shadow: 5px 5px 15px gray;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 100px auto;
+    }
+
+    /* Image Section */
+    .images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imahe {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Selection Containers */
+    .pick {
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .options {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .option input[type="radio"] {
+      display: none;
+    }
+
+    .option label {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    .option input[type="radio"]:checked + label {
+      border-color: black;
+      transform: scale(1.1);
+    }
+
+    /* Quantity Selector */
+    .quantity {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .quantity input {
+      width: 50px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Product Info Section */
+    .product {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 20px;
+      gap: 20px;
+    }
+
+    .par2 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #d63384; /* Pink tone */
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .buttons button {
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .add {
+      background-color: pink;
+      color: white;
+    }
+
+    .add:hover {
+      background-color: #ff99cc; /* Darker pink */
+    }
+
+    .back {
+      background-color: #f8c8dc;
+      color: black;
+    }
+
+    .back:hover {
+      background-color: lightpink;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Image Section -->
+    <div class="images">
+      <img src="file:///C:/Users/Acer/OneDrive/Pictures/website%20img/CASUAL/CASUAL%206.jpg"lt="Product Image" class="imahe">
+      <p class="pick">Choose Size</p>
+      <div class="options">
+        <div class="option">
+          <input type="radio" id="small" name="size" value="Small">
+          <label for="small">36</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="medium" name="size" value="Medium">
+          <label for="medium">37</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="large" name="size" value="Large">
+          <label for="large">38</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="xl" name="size" value="XL">
+          <label for="xl">39</label>
+        </div>
+      </div>
+		<div class="option">
+          <input type="radio" id="xl" name="size" value="XL">
+          <label for="xl">40</label>
+        </div>
+
+      <div class="quantity">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+      </div>
+    </div>
+
+    <!-- Product Info Section -->
+    <div class="product">
+      <p class="par2">Casual</p>
+      <h3>Php249.00</h3>
+      <p class="description">Featuring adjustable buckle straps and a contoured footbed, these sandals combine functionality with a modern look for everyday casual wear.
+</p>
+		<div class="buttons">
+        <button class="add" onclick="addToCart()">Add to Cart</button>
+        <a href="PRODUCT 3D.html"><button class="back">Back</button></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function addToCart() {
+      const color = document.querySelector('input[name="color"]:checked')?.value;
+      const size = document.querySelector('input[name="size"]:checked')?.value;
+      const quantity = document.getElementById('quantity').value;
+  <script>
+    function addToCart() {
+      const color = document.querySelector('input[name="color"]:checked')?.value;
+      const size = document.querySelector('input[name="size"]:checked')?.value;
+      const quantity = document.getElementById('quantity').value;
+
+      if (!size) {
+        alert('Please select both a color and a size.');
+        return;
+	 
+      }
+
+      alert(Added to Cart:\nProduct: High Waist Dress\nColor: ${color}\nSize: ${size}\nQuantity: ${quantity});
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Page</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:#EFEFEF; /* Light pink */
+      color: #333;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color:dimgrey; /* Bright pink */
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .discover-btn {
+      background-color:lightgray; /* White button */
+      color:#EF5DFB; /* Pink text */
+      border: 2px solid #ff4f8b;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .discover-btn:hover {
+      background-color:#EF5DFB; /* Pink on hover */
+      color: white;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color:#EF5DFB; /* Dark pink */
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #EF5DFB; /* Light pink */
+    }
+
+    /* Section Styles */
+    .about-section, .favorites-section, .contact-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #fff; /* White background for sections */
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section h2, .favorites-section h2, .contact-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color:darkcyan; /* Pink headers */
+    }
+
+    /* Favorites Section */
+    .favorites {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      margin-top: 20px;
+    }
+
+    .favorite-item {
+      background-color:lightcoral; /* Bright pink */
+      color:black;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out; /* Smooth scaling */
+      text-align: center;
+      padding: 10px;
+    }
+
+    .favorite-item:hover {
+      transform: scale(1.2); /* Zoom in on hover */
+    }
+
+    /* Footer */
+    .footer {
+      background-color:#EF5DFB; /* Dark pink */
+      color: black;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 600px) {
+      .favorites {
+        flex-direction: column;
+      }
+
+      .favorite-item {
+        width: 100%;
+        height: auto;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+      }
+
+      .navbar ul li {
+        margin: 5px 0;
+      }
+    }
+	  a{
+		  text-decoration: none;
+	  }
+	  button{
+	
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Hello, I'm AIRA</h1>
+    <a href="#about"><button class="discover-btn">Discover More</button></a>
+	  <button><a href="HOME.html" class="back">Back</a></button>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#favorites">My Favorites</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+      "I'm Aira, a passionate individual who loves exploring <br>
+      new ideas and helping others with creativity. <br>
+      Whether it's through writing, art, or simply being a good listener, <br>
+      I aim to bring positivity and inspiration into every space I enter."
+    </p>
+  </section>
+
+  <section id="favorites" class="favorites-section">
+  <h2>My Favorites</h2>
+  <div class="favorites">
+    <div class="favorite-item">
+      <h3>Playing Games</h3>
+      <ul>
+        <li>Badminton</li>
+        <li>Volleyball</li>
+      </ul>
+    </div>
+    <div class="favorite-item">
+      <h3>Watching Movies</h3>
+      <ul>
+        <li>Comedy </li>
+        <li>Horror</li>
+      </ul>
+    </div>
+    <div class="favorite-item">
+      <h3>Listening to Music</h3>
+      <ul>
+        <li>OPM (Original Pilipino Music)</li>
+        <li>Hip-Hop/Rap</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Facebook: AIRA MAE L. PALPAL-LATOC</p>
+    <p>Contact: 09158039723</p>
+    <p>Email: airahmhae07@gmail.com</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 All Rights Reserved</p>
+  </footer>
+</body>
+</html>
